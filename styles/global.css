@@ -22,6 +22,7 @@
   animation: fall 1s linear infinite;
   left: calc(100% * var(--random-x)); /* สุ่มตำแหน่ง X */
   animation-delay: var(--random-delay); /* สุ่มการเริ่มต้น */
+  
 }
 
 @keyframes fall {
@@ -33,4 +34,3 @@
   }
 }
 
-  
