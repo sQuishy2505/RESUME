@@ -1,9 +1,8 @@
 
-
 export default function Home() {
   return (
   <>
-   <body className="w-[100%] h-[100vh] bg-[#281369] relative">
+   <body className="w-[100%] h-[100vh] bg-[#261264] relative">
   <div className="w-full flex flex-row items-start mt-[50px]"> 
 
     <div className="w-[50%] ml-[100px]">
@@ -18,7 +17,7 @@ export default function Home() {
     </div>
     
     
-    <img 
+    <img
       src="https://i.pinimg.com/736x/7d/f0/24/7df0249cd3d8564afb5c3c52120d321f.jpg" 
       width={350} 
       height={300} 
