@@ -8,7 +8,7 @@ export default function Home() {
     <div className="w-[50%] ml-[100px]">
       <p className="text-[50px] font-bold mt-[40px]">
         WELCOME TO MY 
-        <span className="text-[50px] font-roboto ml-[10px] text-blue-500 text-shadow-glow">WORLD!</span>
+        <span className="text-[50px] font-roboto ml-[10px] text-blue-500 text-shadow-glow">"WORLD!"</span>
       </p>
       <p className="text-[40px] text-white mt-[20px] font-bold ml-[10px]">
         I'M
