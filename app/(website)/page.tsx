@@ -27,16 +27,20 @@ export default function Home() {
         <p className="text-[50px] font-bold mt-[40px]">
           WELCOME TO MY
           <span
-            className="text-[50px] font-roboto ml-[10px] text-blue-500 text-shadow-glow"
+            className="text-[50px] font-roboto ml-[10px] text-red-500 text-shadow-glow"
             >WORLD!</span>
           
         </p>
         <p className="text-[40px] text-white mt-[20px] font-bold ml-[10px]">
           I&apos;M
           <span
-            className="text-[40px] font-roboto ml-[10px] text-blue-500 text-shadow-glow"
+            className="text-[40px] font-roboto ml-[10px] text-blue-500"
             >NAPHATTHAPOL KAMPHERA</span>
-          
+        </p>
+        <p className="text-[20px] text-white mt-[20px] font-mono ml-[10px]">Software Engineer 66
+        <span
+            className="text-[20px] font-mono ml-[10px] text-purple-500"
+            >University Of Phayao</span>
         </p>
       </div>
 
