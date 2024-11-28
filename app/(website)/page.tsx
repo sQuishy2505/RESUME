@@ -1,14 +1,5 @@
 
 
-module.exports = {
-  images: {
-    domains: ['https://i.pinimg.com/736x/7d/f0/24/7df0249cd3d8564afb5c3c52120d321f.jpg'], // ใส่โดเมนของ URL รูปภาพที่อนุญาต
-  },
-};
-
-
-
-
 export default function Home() {
   return (
   <>
