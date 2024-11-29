@@ -62,10 +62,12 @@ export default function Home() {
                   EXPERIENCE
                 </div>
               </div>
+              
 
               {/* ข้อมูลที่แสดงเมื่อคลิกปุ่ม EXPERIENCE */}
               {buttonContent && (
                 <div className="mt-4 p-4 bg-gradient-to-r from-red-500 to-blue-500 text-white rounded-lg opacity-0 animate-fadeIn" style={{ whiteSpace: 'pre-wrap' }}>
+                  
                   <p className="font-bold text-lg">Content:</p>
                   <div className="mt-2">{buttonContent}</div>
 
@@ -109,6 +111,61 @@ export default function Home() {
                   </div>
                 </div>
               )}
+              <p className='text-[30px] mt-[20px] font-bold'>CONTACT :</p>
+
+              {/* เพิ่มปุ่มลิ้งค์ด้านล่าง */}
+              <div className="flex space-x-4 mt-6">
+                <a
+                  href="https://github.com/sQuishy2505"  // ลิงก์แรก
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="w-[180px] h-[60px] bg-gray-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-green-600 transition-all">
+                    <Image
+                      src="/gh.png" // รูปไอคอนของปุ่มแรก
+                      alt="Example 1 Icon"
+                      width={20}
+                      height={20}
+                      className="mr-2"
+                    />
+                    GitHub
+                  </div>
+                </a>
+
+                <a
+                  href="https://www.facebook.com/ter.kamphera"  // ลิงก์ที่สอง
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="w-[180px] h-[60px] bg-blue-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-orange-600 transition-all">
+                    <Image
+                      src="/fb.png" // รูปไอคอนของปุ่มที่สอง
+                      alt="Example 2 Icon"
+                      width={20}
+                      height={20}
+                      className="mr-2"
+                    />
+                    Facebook
+                  </div>
+                </a>
+
+                <a
+                  href="https://line.me/ti/p/~putter123456"  // ลิงก์ที่สาม
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="w-[180px] h-[60px] bg-green-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-teal-600 transition-all">
+                    <Image
+                      src="/l.png" // รูปไอคอนของปุ่มที่สาม
+                      alt="Example 3 Icon"
+                      width={20}
+                      height={20}
+                      className="mr-2"
+                    />
+                    LINE
+                  </div>
+                </a>
+              </div>
             </div>
 
             <Image
