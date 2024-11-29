@@ -1,13 +1,19 @@
 'use client';
 import { useState } from 'react';
-import Image from 'next/image'; // นำเข้า Image จาก next/image
+import Image from 'next/image';
 
 export default function Home() {
-  // State สำหรับการควบคุมการแสดงข้อมูล
-  const [showInfo, setShowInfo] = useState(false);
+  // State สำหรับการควบคุมการแสดงข้อมูลทั่วไป
+  const [buttonContent, setButtonContent] = useState('');
 
-  // ฟังก์ชันเพื่อ toggle การแสดงข้อมูล
-  const toggleInfo = () => setShowInfo(!showInfo);
+  // ฟังก์ชันเพื่อเปลี่ยนข้อมูลของปุ่ม หรือ ปิดข้อมูล
+  const handleButtonClick = (content) => {
+    if (buttonContent === content) {
+      setButtonContent(''); // ปิดข้อมูลถ้าคลิกปุ่มเดิม
+    } else {
+      setButtonContent(content); // แสดงข้อมูลใหม่
+    }
+  };
 
   return (
     <>
@@ -27,7 +33,7 @@ export default function Home() {
                 <span className="text-[50px] font-roboto ml-[10px] text-red-500 text-shadow-glow">WORLD!</span>
               </p>
               <p className="text-[40px] text-white mt-[20px] font-bold ml-[10px]">
-                I&apos;M
+                I&apos;M  
                 <span className="text-[40px] font-roboto ml-[10px] text-blue-500">NAPHATTHAPOL KAMPHERA</span>
               </p>
               <p className="text-[20px] text-white mt-[20px] font-mono ml-[10px]">
@@ -39,48 +45,48 @@ export default function Home() {
               <div className="flex space-x-4 mt-[20px]">
                 {/* ปุ่ม PROFILE */}
                 <div
-                  onClick={toggleInfo}
+                  onClick={() => handleButtonClick('This is your profile information.\nI have a passion for technology and coding.\nAnd I love to work on new projects.')}
                   className={`w-[180px] h-[90px] bg-red-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-red-600 transition-all
-                    ${showInfo ? 'scale-105 transform transition-all' : 'scale-100'}`}
+                    ${buttonContent === 'This is your profile information.\nI have a passion for technology and coding.\nAnd I love to work on new projects.' ? 'scale-105 transform transition-all' : 'scale-100'}`}
                 >
-                  {showInfo ? "HIDE" : "PROFILE"}
+                  {buttonContent === 'This is your profile information.\nI have a passion for technology and coding.\nAnd I love to work on new projects.' ? "HIDE" : "PROFILE"}
                 </div>
 
                 {/* ปุ่มใหม่ 3 ปุ่ม */}
                 <div
-                  onClick={toggleInfo}
-                  className={`w-[180px] h-[90px] bg-green-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-green-600 transition-all
-                    ${showInfo ? 'scale-105 transform transition-all' : 'scale-100'}`}
+                  onClick={() => handleButtonClick('This is the content of Button 1.\nIt talks about Button 1 and how it is useful.')}
+                  className={`w-[180px] h-[90px] bg-blue-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-green-600 transition-all
+                    ${buttonContent === 'This is the content of Button 1.\nIt talks about Button 1 and how it is useful.' ? 'scale-105 transform transition-all' : 'scale-100'}`}
                 >
                   Button 1
                 </div>
                 <div
-                  onClick={toggleInfo}
-                  className={`w-[180px] h-[90px] bg-yellow-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-yellow-600 transition-all
-                    ${showInfo ? 'scale-105 transform transition-all' : 'scale-100'}`}
+                  onClick={() => handleButtonClick('This is Button 2.\nMore details about Button 2 and its features can be added here.')}
+                  className={`w-[180px] h-[90px] bg-purple-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-yellow-600 transition-all
+                    ${buttonContent === 'This is Button 2.\nMore details about Button 2 and its features can be added here.' ? 'scale-105 transform transition-all' : 'scale-100'}`}
                 >
                   Button 2
                 </div>
                 <div
-                  onClick={toggleInfo}
-                  className={`w-[180px] h-[90px] bg-blue-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-blue-600 transition-all
-                    ${showInfo ? 'scale-105 transform transition-all' : 'scale-100'}`}
+                  onClick={() => handleButtonClick('This is Button 3.\nExplaining Button 3 and its unique capabilities.')}
+                  className={`w-[180px] h-[90px] bg-yellow-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-blue-600 transition-all
+                    ${buttonContent === 'This is Button 3.\nExplaining Button 3 and its unique capabilities.' ? 'scale-105 transform transition-all' : 'scale-100'}`}
                 >
                   Button 3
                 </div>
               </div>
 
               {/* ข้อมูลที่แสดงเมื่อคลิก */}
-              {showInfo && (
-                <div className="mt-4 p-4 bg-blue-500 text-white rounded-lg opacity-0 animate-fadeIn">
-                  <p className="font-bold text-lg">More Information:</p>
-                  <p className="mt-2">I am a software engineer passionate about technology and problem-solving. I have worked on various web and mobile applications.</p>
+              {buttonContent && (
+                <div className="mt-4 p-4 bg-gradient-to-r from-red-500 to-blue-500 text-white rounded-lg opacity-0 animate-fadeIn" style={{ whiteSpace: 'pre-wrap' }}>
+                  <p className="font-bold text-lg">Content:</p>
+                  <div className="mt-2">{buttonContent}</div>
                 </div>
               )}
             </div>
 
             <Image
-              src="/gojo.jpg"
+              src="/gojo2.gif"
               width={350}
               height={300}
               alt="Profile Picture"
@@ -91,35 +97,6 @@ export default function Home() {
       </body>
 
       <style jsx>{`
-        .flip-card {
-          margin-top: 20px;
-          perspective: 1000px; 
-        }
-
-        .flip-card-inner {
-          transform-style: preserve-3d;
-          transition: transform 0.6s; 
-        }
-
-        .flip-card:hover .flip-card-inner {
-          transform: rotateY(180deg); 
-        }
-
-        .flip-card-front,
-        .flip-card-back {
-          position: absolute;
-          backface-visibility: hidden; 
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .flip-card-back {
-          transform: rotateY(180deg); 
-        }
-
         @keyframes fadeIn {
           0% {
             opacity: 0;
