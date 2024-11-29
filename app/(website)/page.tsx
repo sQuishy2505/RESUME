@@ -173,7 +173,7 @@ export default function Home() {
               width={350}
               height={300}
               alt="Profile Picture"
-              className="ml-[200px] p-2 max-w-sm bg-[#231992] rounded-lg shadow-[0_0_15px_5px_rgba(0,0,255,0.7)]"
+              className="ml-[150px] p-2 max-w-sm bg-[#231992] rounded-lg shadow-[0_0_15px_5px_rgba(0,0,255,0.7)]"
             />
           </div>
         </main>
