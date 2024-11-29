@@ -44,30 +44,69 @@ export default function Home() {
               {/* ปุ่มใหม่ 3 ปุ่ม */}
               <div className="flex space-x-4 mt-[20px]">
                 <div
-                  onClick={() => handleButtonClick('This is Button 1 content')}
+                  onClick={() => handleButtonClick('My name is Ter, a second-year student at the University of Phayao, majoring in Software Engineering. I am seeking internship opportunities to gain experience as a Front-end Developer, Project Manager, or in other software-related fields. \n-------------------------------------------------------------------------------------------------------------------------------------- \nID : 66022725')}
                   className={`w-[180px] h-[90px] bg-red-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-green-600 transition-all`}
                 >
-                  Button 1
+                  PROFILE
                 </div>
                 <div
-                  onClick={() => handleButtonClick('This is Button 2 content')}
+                  onClick={() => handleButtonClick('HTML \n-------------------------------------------------------------------------------------------------------------------------------------- \nCSS \n-------------------------------------------------------------------------------------------------------------------------------------- \nJavaScript \n-------------------------------------------------------------------------------------------------------------------------------------- \nTailwind \n-------------------------------------------------------------------------------------------------------------------------------------- \nNextJS VueJs \n--------------------------------------------------------------------------------------------------------------------------------------  ')}
                   className={`w-[180px] h-[90px] bg-blue-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-yellow-600 transition-all`}
                 >
-                  Button 2
+                  SKILLS
                 </div>
                 <div
-                  onClick={() => handleButtonClick('This is Button 3 content')}
+                  onClick={() => handleButtonClick('Website selling IT equipment (UXUI) \n-------------------------------------------------------------------------------------------------------------------------------------- \nCoffee knowledge (Front-End HTMLCSS) \n-------------------------------------------------------------------------------------------------------------------------------------- \nID Game Seller (VueJS) ')}
                   className={`w-[180px] h-[90px] bg-purple-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-red-600 transition-all`}
                 >
-                  Button 3
+                  EXPERIENCE
                 </div>
               </div>
 
-              {/* ข้อมูลที่แสดงเมื่อคลิกแต่ละปุ่ม */}
+              {/* ข้อมูลที่แสดงเมื่อคลิกปุ่ม EXPERIENCE */}
               {buttonContent && (
                 <div className="mt-4 p-4 bg-gradient-to-r from-red-500 to-blue-500 text-white rounded-lg opacity-0 animate-fadeIn" style={{ whiteSpace: 'pre-wrap' }}>
                   <p className="font-bold text-lg">Content:</p>
                   <div className="mt-2">{buttonContent}</div>
+
+                  {/* เพิ่มปุ่มลิ้งค์ใน EXPERIENCE */}
+                  <div className="flex space-x-4 mt-4">
+                    {buttonContent.includes('Website selling IT equipment') && (
+                      <a
+                        href="https://www.figma.com/proto/AldP8EKNG2w8IjPeeo7kmd/12?node-id=747-2447&starting-point-node-id=1%3A8"  // ลิงก์แรก
+                        target="_blank"  // เปิดในแท็บใหม่
+                        rel="noopener noreferrer"  // เพิ่มความปลอดภัย
+                      >
+                        <div className="w-[180px] h-[60px] bg-blue-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-gradient-to-b from-blue-500 to-black transition-all">
+                          UXUI
+                        </div>
+                      </a>
+                    )}
+
+                    {buttonContent.includes('Coffee knowledge') && (
+                      <a
+                        href="https://github.com/9OAT0/Front-req"  // ลิงก์ที่สอง
+                        target="_blank"  // เปิดในแท็บใหม่
+                        rel="noopener noreferrer"  // เพิ่มความปลอดภัย
+                      >
+                        <div className="w-[180px] h-[60px] bg-purple-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-gradient-to-b from-purple-500 to-black transition-all">
+                          FRONT-END
+                        </div>
+                      </a>
+                    )}
+
+                    {buttonContent.includes('ID Game Seller') && (
+                      <a
+                        href="https://github.com/Sylveeeeee/Pirate-webe"  // ลิงก์ที่สาม
+                        target="_blank"  // เปิดในแท็บใหม่
+                        rel="noopener noreferrer"  // เพิ่มความปลอดภัย
+                      >
+                        <div className="w-[180px] h-[60px] bg-red-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-gradient-to-b from-red-500 to-black transition-all">
+                          VueJS
+                        </div>
+                      </a>
+                    )}
+                  </div>
                 </div>
               )}
             </div>
