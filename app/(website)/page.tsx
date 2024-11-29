@@ -3,11 +3,11 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 export default function Home() {
-  // State สำหรับการควบคุมการแสดงข้อมูลทั่วไป
+  // State สำหรับข้อมูลแต่ละปุ่ม
   const [buttonContent, setButtonContent] = useState('');
 
   // ฟังก์ชันเพื่อเปลี่ยนข้อมูลของปุ่ม หรือ ปิดข้อมูล
-  const handleButtonClick = (content) => {
+  const handleButtonClick = (content: string) => {
     if (buttonContent === content) {
       setButtonContent(''); // ปิดข้อมูลถ้าคลิกปุ่มเดิม
     } else {
@@ -41,42 +41,29 @@ export default function Home() {
                 <span className="text-[20px] font-mono ml-[10px] text-purple-500">University Of Phayao</span>
               </p>
 
-              {/* ปุ่มทั้งหมด */}
+              {/* ปุ่มใหม่ 3 ปุ่ม */}
               <div className="flex space-x-4 mt-[20px]">
-                {/* ปุ่ม PROFILE */}
                 <div
-                  onClick={() => handleButtonClick('This is your profile information.\nI have a passion for technology and coding.\nAnd I love to work on new projects.')}
-                  className={`w-[180px] h-[90px] bg-red-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-red-600 transition-all
-                    ${buttonContent === 'This is your profile information.\nI have a passion for technology and coding.\nAnd I love to work on new projects.' ? 'scale-105 transform transition-all' : 'scale-100'}`}
-                >
-                  {buttonContent === 'This is your profile information.\nI have a passion for technology and coding.\nAnd I love to work on new projects.' ? "HIDE" : "PROFILE"}
-                </div>
-
-                {/* ปุ่มใหม่ 3 ปุ่ม */}
-                <div
-                  onClick={() => handleButtonClick('This is the content of Button 1.\nIt talks about Button 1 and how it is useful.')}
-                  className={`w-[180px] h-[90px] bg-blue-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-green-600 transition-all
-                    ${buttonContent === 'This is the content of Button 1.\nIt talks about Button 1 and how it is useful.' ? 'scale-105 transform transition-all' : 'scale-100'}`}
+                  onClick={() => handleButtonClick('This is Button 1 content')}
+                  className={`w-[180px] h-[90px] bg-red-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-green-600 transition-all`}
                 >
                   Button 1
                 </div>
                 <div
-                  onClick={() => handleButtonClick('This is Button 2.\nMore details about Button 2 and its features can be added here.')}
-                  className={`w-[180px] h-[90px] bg-purple-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-yellow-600 transition-all
-                    ${buttonContent === 'This is Button 2.\nMore details about Button 2 and its features can be added here.' ? 'scale-105 transform transition-all' : 'scale-100'}`}
+                  onClick={() => handleButtonClick('This is Button 2 content')}
+                  className={`w-[180px] h-[90px] bg-blue-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-yellow-600 transition-all`}
                 >
                   Button 2
                 </div>
                 <div
-                  onClick={() => handleButtonClick('This is Button 3.\nExplaining Button 3 and its unique capabilities.')}
-                  className={`w-[180px] h-[90px] bg-yellow-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-blue-600 transition-all
-                    ${buttonContent === 'This is Button 3.\nExplaining Button 3 and its unique capabilities.' ? 'scale-105 transform transition-all' : 'scale-100'}`}
+                  onClick={() => handleButtonClick('This is Button 3 content')}
+                  className={`w-[180px] h-[90px] bg-purple-500 text-white font-bold flex justify-center items-center rounded-lg cursor-pointer hover:bg-red-600 transition-all`}
                 >
                   Button 3
                 </div>
               </div>
 
-              {/* ข้อมูลที่แสดงเมื่อคลิก */}
+              {/* ข้อมูลที่แสดงเมื่อคลิกแต่ละปุ่ม */}
               {buttonContent && (
                 <div className="mt-4 p-4 bg-gradient-to-r from-red-500 to-blue-500 text-white rounded-lg opacity-0 animate-fadeIn" style={{ whiteSpace: 'pre-wrap' }}>
                   <p className="font-bold text-lg">Content:</p>
