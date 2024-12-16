@@ -38,7 +38,7 @@ export default function Home() {
               </p>
               <p className="text-[20px] text-white mt-[20px] font-mono ml-[10px]">
                 Software Engineer 66
-                <span className="text-[20px] font-mono ml-[10px] text-purple-500">University Of Phayao</span>
+                <span className="text-[20px] font-mono ml-[10px] text-purple-500">University Of Phaya</span>
               </p>
 
               {/* ปุ่มใหม่ 3 ปุ่ม */}
