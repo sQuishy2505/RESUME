@@ -19,7 +19,7 @@ export default function Home() {
     <>
     
       <body className="__variable_1e4310 __variable_c3aa02 antialiased">
-        <main className="min-h-screen w-[100%] transition-colors duration-500 bg-[#0a0a0a] text-white">
+        <main className="min-h-screen w-full transition-colors duration-500 bg-[#0a0a0a] text-white">
           <div className="fixed inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-transparent"></div>
           <div className="fixed inset-0 overflow-hidden pointer-events-none">
             <div className="absolute -top-40 -left-40 w-96 h-96 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob bg-red-900"></div>
@@ -27,7 +27,7 @@ export default function Home() {
             <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000 bg-blue-900 z-[-1]"></div>
           </div>
 
-          <div className="relative z-10 w-full flex flex-row items-start ">
+          <div className="relative z-10 w-full flex flex-row items-start mt-[50px]">
             <div className="w-[50%] ml-[100px]">
               <p className="text-[50px] font-bold mt-[60px]">
                 WELCOME TO MY
